@@ -1,4 +1,4 @@
-// シェーダーの作成
+
 
 const vertexSrc = `
 precision mediump float;
@@ -44,18 +44,15 @@ void main() {
 }
 `;
 
-// デモに使用する画像URL
 const assetUrls = [
 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/13842/water.jpg',
 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/13842/water2.jpg',
 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/13842/disp.jpg'];
 
 
-/**
-** 初期化開始
-*/
 
-// レンダラーの初期化
+
+
 let renderer = new THREE.WebGLRenderer();
 let canvas = renderer.domElement;
 document.body.appendChild(canvas);
@@ -67,11 +64,11 @@ var cnt = 0;
 
 let textureArr = [];
 
-// カメラの初期化
+
 let camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 1, 1000);
 camera.position.z = 1;
 
-// テクスチャの初期化
+
 assetUrls.forEach((url, index) => {
   let img = new Image();
 
